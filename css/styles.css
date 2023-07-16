@@ -13,8 +13,155 @@
     --white-bg-color: #eff5f5;
 }
 
-@media screen and (min-width:320px) {
+/*   header */
 
+header {
+    background-image: url(/img/Escuela\ UntrefSchool\ Entrada.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+
+    padding: 0.5rem;
+}
+
+header #top {
+    display: flex;
+    align-items: center;
+    padding: 0rem 0.5rem;
+    justify-content: space-between;
+    background-color: #181823;
+    margin: -10px;
+    height: 3rem;
+}
+
+header #top > div {
+    display: flex;
+    align-items: center;
+}
+
+header #top > div img {
+    width: auto;
+    height: 2rem;
+}
+
+header #top > div span {
+    padding-left: 0.25rem;
+    font-weight: 400;
+    text-align: center;
+    color: #fff;
+}
+
+header #top nav ul a {
+    text-decoration: none;
+    color: #fff;
+}
+
+header #top nav ul li{
+    list-style-type: none;
+}
+
+#encabezado {   
+    height: 12rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 7rem;
+    margin-top: 3rem;
+}
+
+#encabezado h1 {
+    font-size: 1.8rem;
+    color: #ffffff;
+    font-weight: 500;
+    font-family: 'Belanosima', sans-serif;
+    text-align: center;
+}
+
+#encabezado button {
+    margin-top: 0.5rem;
+    width: 8rem;
+    background-color: var(--white-bg-color);
+    border: 0;
+    border-radius: 100px;
+    height: 2.3rem;
+}
+
+/* main */
+
+#quienes-somos {
+    background-color: var(--white-bg-color);
+    padding: 2rem 1rem 0rem 1rem;
+}
+
+#quienes-somos h2 {
+    text-align: center;
+    color: var(--blue-bg-color);
+}
+
+#quienes-somos > div img {
+    padding: 2rem 0rem;
+    max-width: 100%;
+    height: auto;
+}
+
+#quienes-somos > div p {
+    padding-bottom: 2rem;
+}
+
+main #por-qué-elegirnos {
+    padding: 2rem 1rem;
+}
+
+#por-qué-elegirnos h2 {
+    text-align: center;
+    color: var(--blue-bg-color);
+}
+
+#por-qué-elegirnos > div img {
+    padding: 2rem 0rem;
+    max-width: 100%;
+    height: auto;
+}
+
+#por-qué-elegirnos > div p {
+    padding-bottom: 2rem;
+}
+
+#propuesta-educativa {
+    background-color: var(--orange-bg-color);
+    padding: 2rem 1rem 0rem 1rem;
+}
+
+#propuesta-educativa h2 {
+    color: #fff;
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+#propuesta-educativa > div img{
+    max-width: 100%;
+    padding-bottom: 0.5rem;
+    border-radius: 2rem;
+}
+
+#propuesta-educativa > div p {
+    padding-bottom: 1.5rem;
+    color: #ffffff;
+    text-align: center;
+}
+
+
+@media screen and (min-width:320px) {
+    /* header nav */
+
+    #top nav ul {
+        display: none;
+    }
+
+    nav::before {
+        content: url(/img/menu\ blanco.png);
+    }
 }
 
 @media screen and (min-width: 768px) {
