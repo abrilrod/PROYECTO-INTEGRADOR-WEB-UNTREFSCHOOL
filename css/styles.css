@@ -1,0 +1,23 @@
+* {
+    font-family: 'Poppins', sans-serif;;
+}
+
+:root {
+    --orange-bg-color: #fc7300;
+    --green-bg-color: #1f8a70;
+    --blue-bg-color: #00425a;
+    --darkBlue-bg-color: #181823;
+    --white-bg-color: #eff5f5;
+}
+
+@media screen and (min-width:320px) {
+
+}
+
+@media screen and (min-width: 768px) {
+
+}
+
+@media screen and (min-width: 1280px) {
+    
+}
