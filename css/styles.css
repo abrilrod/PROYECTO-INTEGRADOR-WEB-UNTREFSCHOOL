@@ -98,6 +98,11 @@ header #top nav ul li{
     color: var(--blue-bg-color);
 }
 
+#quienes-somos > div {
+    display: flex;
+    flex-direction: column;
+}
+
 #quienes-somos > div img {
     padding: 2rem 0rem;
     max-width: 100%;
@@ -110,6 +115,11 @@ header #top nav ul li{
 
 main #por-qué-elegirnos {
     padding: 2rem 1rem;
+}
+
+#por-qué-elegirnos > div {
+    display: flex;
+    flex-direction: column;
 }
 
 #por-qué-elegirnos h2 {
@@ -270,12 +280,125 @@ footer .contacto p {
 
     #encabezado {   
         padding-top: 13rem;
-        margin-top: 3rem;
     }
 }
 
 @media screen and (min-width: 768px) {
 
+    /* header */
+
+    nav::before {
+        display: none;
+    }
+
+    header #top {
+        height: 4rem;
+    }
+    
+    header #top > div {
+        display: flex;
+        align-items: center;
+    }
+    
+    header #top > div img {
+        width: auto;
+        height: 2rem;
+    }
+    
+    header #top > div span {
+        padding-left: 0.25rem;
+        font-weight: 400;
+        text-align: center;
+        color: #fff;
+    }
+    #top nav ul {
+        display: flex;
+        align-items: center;
+    }
+
+    #top nav ul a {
+        padding: 1rem;
+    }
+    
+    #encabezado {   
+        padding-top: 13rem;
+    }
+    
+    #encabezado h1 {
+        font-size: 2rem;
+    }
+    
+    #encabezado button {
+        width: 10rem;
+        height: 2.7rem;
+        font-size: 1.1rem;
+    }
+
+    /* main */
+
+        /* quienes somos */
+
+    #quienes-somos > div {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #quienes-somos > div img {
+        padding: 2rem 1rem;
+        max-width: 50%;
+        height: 20%;
+    }
+
+    #quienes-somos > div p {
+        width: 50%;
+        padding-top: 2rem;
+    }
+        /* por que elegirnos */
+
+    #por-qué-elegirnos > div {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    #por-qué-elegirnos > div img {
+        padding: 2rem 1rem;
+        max-width: 50%;
+        height: 20%;
+    }
+    
+    #por-qué-elegirnos > div p {
+        width: 50%;
+        padding-top: 2rem;
+    }
+        /* propuesta educativa */
+
+    #propuesta-educativa > div {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+    }
+
+    #propuesta-educativa > div .item {
+        padding: 0rem 1rem;
+    }
+    
+    #propuesta-educativa > div img{
+        max-width: 100%;
+        height: auto;
+    }
+    
+    #propuesta-educativa > div p {
+        padding-bottom: 1.5rem;
+        color: #ffffff;
+        text-align: center;
+    }    
+
+    /* footer */
+
+    footer .ubicación iframe {
+        align-self: self-start;
+    }
+    
 }
 
 @media screen and (min-width: 1280px) {
