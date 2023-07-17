@@ -21,7 +21,6 @@ header {
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
-
     padding: 0.5rem;
 }
 
@@ -62,7 +61,7 @@ header #top nav ul li{
 }
 
 #encabezado {   
-    height: 12rem;
+    height: 20rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -139,10 +138,22 @@ main #por-qué-elegirnos {
     padding-bottom: 2rem;
 }
 
+#propuesta-educativa > div {
+    display: flex;
+    flex-direction: column;
+}
+
 #propuesta-educativa > div img{
     max-width: 100%;
-    padding-bottom: 0.5rem;
-    border-radius: 2rem;
+    margin-bottom: 1.5rem;
+    align-self: center;
+    border-radius: 40px;
+}
+
+#propuesta-educativa > div img:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: transform 0.3s
 }
 
 #propuesta-educativa > div p {
@@ -151,6 +162,100 @@ main #por-qué-elegirnos {
     text-align: center;
 }
 
+#últimas-noticias {
+    background-color: var(--white-bg-color);
+    padding: 2rem 1rem 4rem 1rem;
+}
+
+#últimas-noticias h2 {
+    text-align: center;
+    padding-bottom: 1rem;
+    color: var(--blue-bg-color);
+}
+
+#últimas-noticias .card {
+    background-color: var(--blue-bg-color);
+    border-radius: 40px;
+    margin-top: 1.5rem;
+    color: #ffffff;
+    padding: 1.5rem;
+    box-shadow:  5px 5px 12px -3px rgba(0,0,0,0.66);
+}
+
+#últimas-noticias .card h3 {
+    padding-bottom: 0.5rem;
+}
+
+#últimas-noticias .card p {
+    text-align: justify;
+}
+
+/*   footer */ 
+
+footer {
+    background-color: #1f8a70;
+}
+
+footer div {
+    color: #ffffff;
+    padding: 1rem;
+}
+
+footer h4 {
+    padding-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+footer .redes {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+footer .redes .redes-grid {
+    display: grid;
+    grid-template-columns: 0.2fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    row-gap: 0.25rem;
+    column-gap: 0.5rem;
+    padding: 0rem;
+}
+
+footer .redes .redes-grid p {
+    align-self: center;
+} 
+
+footer .redes .redes-grid svg {
+    align-self: center;
+    justify-self: end;
+}
+
+footer .ubicación {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+}
+
+footer .ubicación h4 {
+    align-self: flex-start;
+}
+
+footer .ubicación iframe {
+    align-self: center;
+}
+
+footer .contacto {
+    display: flex;
+    flex-direction: column;
+}
+
+footer .contacto p {
+    padding-bottom: 1rem;
+}
+
+
+/* responsive mobile first */
 
 @media screen and (min-width:320px) {
     /* header nav */
@@ -161,6 +266,11 @@ main #por-qué-elegirnos {
 
     nav::before {
         content: url(/img/menu\ blanco.png);
+    }
+
+    #encabezado {   
+        padding-top: 13rem;
+        margin-top: 3rem;
     }
 }
 
