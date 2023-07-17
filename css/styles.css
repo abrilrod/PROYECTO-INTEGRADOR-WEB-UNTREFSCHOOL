@@ -86,6 +86,13 @@ header #top nav ul li{
     height: 2.3rem;
 }
 
+#encabezado button:hover {
+    cursor: pointer;
+    background-color: var(--orange-bg-color);
+    color: #fff;
+    transition: 1s;
+}
+
 /* main */
 
 #quienes-somos {
@@ -111,6 +118,7 @@ header #top nav ul li{
 
 #quienes-somos > div p {
     padding-bottom: 2rem;
+    text-align: justify;
 }
 
 main #por-qué-elegirnos {
@@ -135,6 +143,7 @@ main #por-qué-elegirnos {
 
 #por-qué-elegirnos > div p {
     padding-bottom: 2rem;
+    text-align: justify;
 }
 
 #propuesta-educativa {
@@ -190,6 +199,12 @@ main #por-qué-elegirnos {
     color: #ffffff;
     padding: 1.5rem;
     box-shadow:  5px 5px 12px -3px rgba(0,0,0,0.66);
+}
+
+#últimas-noticias .card:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: transform 0.3s
 }
 
 #últimas-noticias .card h3 {
@@ -402,5 +417,85 @@ footer .contacto p {
 }
 
 @media screen and (min-width: 1280px) {
+    /* header */
     
+    #encabezado {   
+        padding-top: 10rem;
+        height: 30rem;
+    }
+    
+    #encabezado h1 {
+        font-size: 3.5rem;
+        color: var(--green-bg-color);
+    }
+    
+    #encabezado button {
+        width: 12rem;
+        height: 3rem;
+        font-size: 1.3rem;
+    }
+
+    /* main */
+
+    main h2 {
+        font-size: 2rem;
+    }
+
+        /* quienes somos */
+
+    #quienes-somos > div img {
+        max-width: 30%;
+        height: 20%;
+    }
+
+    #quienes-somos > div p {
+        width: 70%;
+        font-size: 1.2rem;
+    }
+
+        /* por que elegirnos */
+
+    #por-qué-elegirnos > div img {
+        max-width: 30%;
+        height: 20%;
+    }
+
+    #por-qué-elegirnos > div p {
+        width: 70%;
+        font-size: 1.2rem;
+    }
+
+        /* propuesta educativa */
+
+    #propuesta-educativa > div .item p {
+        font-size: 1.2rem;
+    }
+
+        /* ultimas noticias */
+
+    #últimas-noticias .card-container {
+        display: flex;
+    }
+
+    #últimas-noticias .card-container .card {
+        margin: 2rem;
+        width: 50%;
+    }
+
+    /* footer */
+
+    footer {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+    }
+    
+    footer h4 {
+        padding-bottom: 1rem;
+        font-size: 1.75rem;
+    }
+
+    footer p {
+        font-size: 1.25rem;
+    }
 }
