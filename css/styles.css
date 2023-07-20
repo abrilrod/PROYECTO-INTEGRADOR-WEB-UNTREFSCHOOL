@@ -2,7 +2,7 @@
     margin: 0;
     box-sizing: border-box;
     padding: 0;
-    font-family: 'Poppins', sans-serif;;
+    font-family: 'Poppins', sans-serif;
 }
 
 :root {
@@ -16,22 +16,23 @@
 /*   header */
 
 header {
-    background-image: url(/img/Escuela\ UntrefSchool\ Entrada.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     padding: 0.5rem;
+    background-color: #fff;
+    position: fixed;
+    left: 0;
+    right: 0;
 }
 
 header #top {
     display: flex;
     align-items: center;
-    padding: 0rem 0.5rem;
+    padding: 0.5rem 1rem;
     justify-content: space-between;
-    background-color: #181823;
     margin: -10px;
     height: 3rem;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
 }
 
 header #top > div {
@@ -46,44 +47,94 @@ header #top > div img {
 
 header #top > div span {
     padding-left: 0.25rem;
-    font-weight: 400;
+    font-weight: 700;
     text-align: center;
-    color: #fff;
+    color: var(--blue-bg-color);
 }
 
 header #top nav ul a {
     text-decoration: none;
-    color: #fff;
 }
 
 header #top nav ul li{
     list-style-type: none;
+    margin-bottom: -1rem;
 }
 
-#encabezado {   
+header #top .dropdown button{
+    background-color: #fff;
+    border: none;
+    padding: 0rem;
+}
+
+header #top .dropdown .btn:hover, header .dropdown .btn:active {
+    background-color: #fff;
+}
+
+header #top .dropdown button i{
+    color: var(--darkBlue-bg-color);
+    font-size: 1.5rem;
+}
+
+header #top .dropdown .dropdown-menu {
+    transition: 0.5s;
+    background-color: rgba(255, 255, 255, 0.3);
+    border: none;
+}
+
+header .dropdown-menu li a {
+    color: #fff;
+    font-weight: 500;
+}
+
+header .dropdown-menu li a:hover{
+    color: var(--orange-bg-color);
+}
+
+/* main */
+
+h2 {
+    font-weight: 700;
+    margin: 0;
+}
+
+h4 {
+    font-weight: 600;
+    margin: 0;
+}
+
+#encabezado { 
+    background-image: linear-gradient(0deg, rgba(25, 25, 35, 0.606), rgba(0, 68, 90, 0.606)), url(/img/Escuela\ UntrefSchool\ Entrada.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
     height: 20rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 7rem;
-    margin-top: 3rem;
+    justify-content: center;
 }
 
 #encabezado h1 {
-    font-size: 1.8rem;
-    color: #ffffff;
-    font-weight: 500;
+    font-size: 2.25rem;
+    color: #fff;
+    font-weight: 600;
     font-family: 'Belanosima', sans-serif;
     text-align: center;
 }
 
-#encabezado button {
+#encabezado p {
+    color: #fff;
+    text-align: center;
+}
+
+#encabezado .btn-primary {
     margin-top: 0.5rem;
     width: 8rem;
     background-color: var(--white-bg-color);
     border: 0;
     border-radius: 100px;
     height: 2.3rem;
+    color: var(--darkBlue-bg-color);
 }
 
 #encabezado button:hover {
@@ -93,11 +144,30 @@ header #top nav ul li{
     transition: 1s;
 }
 
-/* main */
+#encabezado .modal .modal-dialog .modal-content .modal-body .button-enviar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#encabezado .modal .modal-dialog .modal-content .modal-body .button-enviar input {
+    background-color: var(--blue-bg-color);
+    color: #fff;
+    transition: 1s;
+}
+
+#encabezado .modal .modal-dialog .modal-content .modal-body .button-enviar input:hover {
+    background-color: var(--green-bg-color);
+}
+
+#encabezado .modal .modal-dialog .modal-content .modal-header .btn-close {
+    background-color: #fff;
+    justify-content: flex-end;
+}
 
 #quienes-somos {
     background-color: var(--white-bg-color);
-    padding: 2rem 1rem 0rem 1rem;
+    padding: 3rem 1rem 2rem 1rem;
 }
 
 #quienes-somos h2 {
@@ -121,8 +191,8 @@ header #top nav ul li{
     text-align: justify;
 }
 
-main #por-qué-elegirnos {
-    padding: 2rem 1rem;
+#por-qué-elegirnos {
+    padding: 3rem 1rem 2rem 1rem;
 }
 
 #por-qué-elegirnos > div {
@@ -148,7 +218,6 @@ main #por-qué-elegirnos {
 
 #propuesta-educativa {
     background-color: var(--orange-bg-color);
-    padding: 2rem 1rem 0rem 1rem;
 }
 
 #propuesta-educativa h2 {
@@ -171,7 +240,7 @@ main #por-qué-elegirnos {
 
 #propuesta-educativa > div img:hover {
     cursor: pointer;
-    transform: scale(1.1);
+    transform: scale(1.05);
     transition: transform 0.3s
 }
 
@@ -183,7 +252,8 @@ main #por-qué-elegirnos {
 
 #últimas-noticias {
     background-color: var(--white-bg-color);
-    padding: 2rem 1rem 4rem 1rem;
+    padding-bottom:4rem;
+    padding: 3rem 1rem 2rem 1rem;
 }
 
 #últimas-noticias h2 {
@@ -203,7 +273,7 @@ main #por-qué-elegirnos {
 
 #últimas-noticias .card:hover {
     cursor: pointer;
-    transform: scale(1.1);
+    transform: scale(1.05);
     transition: transform 0.3s
 }
 
@@ -237,22 +307,25 @@ footer .redes {
     align-items: flex-start;
 }
 
-footer .redes .redes-grid {
-    display: grid;
-    grid-template-columns: 0.2fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    row-gap: 0.25rem;
-    column-gap: 0.5rem;
-    padding: 0rem;
+footer .redes .redes-content {
+    padding-left: 0rem;
+    padding-top: 0rem;
 }
 
-footer .redes .redes-grid p {
+footer .redes .redes-content p {
     align-self: center;
 } 
 
-footer .redes .redes-grid svg {
-    align-self: center;
-    justify-self: end;
+footer .redes .redes-content p:hover {
+    cursor: pointer;
+}
+
+footer .redes .redes-content p i {
+    padding-right: 0.5rem;
+}
+
+footer .redes .redes-content p i:hover {
+    cursor: pointer;
 }
 
 footer .ubicación {
@@ -289,12 +362,10 @@ footer .contacto p {
         display: none;
     }
 
-    nav::before {
-        content: url(/img/menu\ blanco.png);
-    }
-
-    #encabezado {   
-        padding-top: 13rem;
+    /* main encabezado */
+    
+    #encabezado p {
+        display: none;
     }
 }
 
@@ -302,7 +373,7 @@ footer .contacto p {
 
     /* header */
 
-    nav::before {
+    #top nav {
         display: none;
     }
 
@@ -310,6 +381,11 @@ footer .contacto p {
         height: 4rem;
     }
     
+    header #top .logo span {
+        font-weight: 700;
+        color: var(--blue-bg-color);
+    }
+
     header #top > div {
         display: flex;
         align-items: center;
@@ -324,8 +400,8 @@ footer .contacto p {
         padding-left: 0.25rem;
         font-weight: 400;
         text-align: center;
-        color: #fff;
     }
+
     #top nav ul {
         display: flex;
         align-items: center;
@@ -334,22 +410,26 @@ footer .contacto p {
     #top nav ul a {
         padding: 1rem;
     }
-    
-    #encabezado {   
-        padding-top: 13rem;
+
+    /* main */
+
+    #encabezado {
+        height: 25rem;
     }
-    
-    #encabezado h1 {
-        font-size: 2rem;
+
+    #quienes-somos, #por-qué-elegirnos, #propuesta-educativa, #últimas-noticias {
+        padding: 2rem 1.25rem 0rem 1.25rem;
     }
-    
-    #encabezado button {
+
+    #encabezado .btn-primary {
         width: 10rem;
         height: 2.7rem;
         font-size: 1.1rem;
     }
 
-    /* main */
+    #encabezado p {
+        display: block;
+    }
 
         /* quienes somos */
 
@@ -408,6 +488,10 @@ footer .contacto p {
         text-align: center;
     }    
 
+    #últimas-noticias {
+        padding-bottom: 4rem;
+    }
+
     /* footer */
 
     footer .ubicación iframe {
@@ -418,21 +502,45 @@ footer .contacto p {
 
 @media screen and (min-width: 1280px) {
     /* header */
+
+    #top nav {
+        display: block;
+    }
+
+    #top .dropdown {
+        display: none;
+    }
+
+    #top nav ul a {
+        color: var(--blue-bg-color);
+    }
+
+    #top nav ul a:hover, #top nav ul a:active {
+        color: var(--green-bg-color);
+    }
     
     #encabezado {   
         padding-top: 10rem;
-        height: 45rem;
+        height: 50rem;
     }
     
     #encabezado h1 {
         font-size: 3.5rem;
-        color: var(--green-bg-color);
     }
-    
-    #encabezado button {
+
+    #encabezado p {
+        font-size: 1.25rem;
+        padding: 0rem 10rem;
+    }
+
+    #encabezado .btn-primary {
         width: 12rem;
         height: 3rem;
         font-size: 1.3rem;
+    }
+
+    #encabezado .modal .modal-dialog .modal-content .modal-header .btn-close {
+        text-align: end;
     }
 
     /* main */
@@ -442,6 +550,10 @@ footer .contacto p {
     }
 
         /* quienes somos */
+
+    #quienes-somos {
+        padding: 4rem 2rem;
+    }
 
     #quienes-somos > div img {
         max-width: 30%;
@@ -455,6 +567,10 @@ footer .contacto p {
 
         /* por que elegirnos */
 
+    #por-qué-elegirnos {
+        padding: 4rem 2rem;
+    }
+
     #por-qué-elegirnos > div img {
         max-width: 30%;
         height: 20%;
@@ -467,11 +583,19 @@ footer .contacto p {
 
         /* propuesta educativa */
 
+    #propuesta-educativa {
+        padding: 4rem 2rem;
+    }
+
     #propuesta-educativa > div .item p {
         font-size: 1.2rem;
     }
 
         /* ultimas noticias */
+
+    #últimas-noticias {
+        padding: 4rem 2rem;
+    }
 
     #últimas-noticias .card-container {
         display: flex;
