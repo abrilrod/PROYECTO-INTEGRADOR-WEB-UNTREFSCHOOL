@@ -167,7 +167,7 @@ h4 {
 
 #quienes-somos {
     background-color: var(--white-bg-color);
-    padding: 3rem 1rem 2rem 1rem;
+    padding: 4rem 2rem;
 }
 
 #quienes-somos h2 {
@@ -192,7 +192,7 @@ h4 {
 }
 
 #por-qué-elegirnos {
-    padding: 3rem 1rem 2rem 1rem;
+    padding: 4rem 2rem;
 }
 
 #por-qué-elegirnos > div {
@@ -218,6 +218,7 @@ h4 {
 
 #propuesta-educativa {
     background-color: var(--orange-bg-color);
+    padding: 4rem 2rem;
 }
 
 #propuesta-educativa h2 {
@@ -253,7 +254,7 @@ h4 {
 #últimas-noticias {
     background-color: var(--white-bg-color);
     padding-bottom:4rem;
-    padding: 3rem 1rem 2rem 1rem;
+    padding: 4rem 2rem;
 }
 
 #últimas-noticias h2 {
@@ -367,6 +368,10 @@ footer .contacto p {
     #encabezado p {
         display: none;
     }
+
+    #propuesta-educativa {
+        padding: 4rem 2rem;
+    }
 }
 
 @media screen and (min-width: 768px) {
@@ -471,6 +476,10 @@ footer .contacto p {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 20px;
+    }
+
+    #propuesta-educativa {
+        padding: 4rem 2rem;
     }
 
     #propuesta-educativa > div .item {
